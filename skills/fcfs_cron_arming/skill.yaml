@@ -1,0 +1,24 @@
+name: fcfs_cron_arming
+title: Arm an FCFS mint with cron jobs
+description: Arm a confirmed first-come-first-served mint so the fire survives machine replacement by starting it from two runonce cron jobs minutes before the open.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - scheduler_job:sidecoin-fire-guard run e2d29181-4912-4ebf-af40-b2f1d1c93975
+  - message:assistant-msg-1c060a64-d00a-4138-a548-d9d52bbd6fc4
+  - message:assistant-msg-583d3c38-39f5-4d62-b4fc-4dad065fd44d
+  - ~/workspace/fastmint/FCFS_ARMING_TEMPLATE.md
+  - ~/AGENTS.md
+  - ~/workspace/custom-skills/fastmint-fcfs/SKILL.md
+  measurement:
+    proxy_metric_id: fcfs_mint_success_rate
+    success_criterion: The next confirmed FCFS mint after install is armed from inside its T-2 runonce cron, its fire process is alive at the start time, and the outcome is reported from that run. A miss caused by a dead background fire counts as failure. If no confirmed FCFS mint occurs inside the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: 'On 2026-11-11 the Sidecoin free claim was fully prepared and confirmed, yet no transaction was ever sent. The background fire died three times to VM replacement: armed 14:54 and dead by 16:55, re-armed 16:56 and stopped within seconds, and the guard cron run e2d29181 re-armed at 19:51 with all checks green then died before the 20:00:56 open. The log stopped at arming with zero trigger lines, freeSold reached 500/500 and the wallet balance was untouched. The fastmint-fcfs skill still instructs arming as a long-lived background process, while the fix exists only in AGENTS.md and the FCFS_ARMING_TEMPLATE.md file. The fastmint skill is upstream-synced third-party code, so editing it locally would be clobbered by the next sync, so a separate managed skill states the cron method and its precedence over the background step. Other candidates were rejected: baw sign-in guidance already exists in the binance skill authentication reference (link first, five minute expiry, restart on a stale code), the single failed roboai watcher run was isolated among many successes, and the repeated handoff suppressions in relationships and memory are healthy deduplication, not a skill gap.'
+  review_after: 2026-12-11T15:53:34.362229+00:00
+  reviewed_at: 2026-11-11T15:53:34.362229+00:00
+  run_id: sirun_c6913a4a0a974768b34a76bf44604a56

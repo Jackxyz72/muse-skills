@@ -1,0 +1,22 @@
+name: makefun_submission_quota
+title: Enter make.fun contests under a submission quota
+description: Enter a make.fun contest without wasting its submission quota by verifying the limit first, testing weakest first and submitting the strongest candidate last.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - gta6-cover-art-01
+  - 01a1fb71
+  - 01a1fb6c
+  - ~/workspace/custom-skills/makefun_submission_quota/SKILL.md
+  measurement:
+    proxy_metric_id: makefun_cover_art_pre_submit_check_rate
+    success_criterion: The next cover art bundle submission in the window passes the dossier, font, licence and filename checks before it is sent, with no rejection at those gates. If no cover art submission occurs in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: 'Cover art rounds 4, 6, 7, 8 and 9 were all rejected before round 10 scored valid=1 at dev 80.01%, each at a distinct bundle gate named in the handoff: an invented dossier.json instead of the kit buildDossier output byte for byte, a Google Fonts URL in index.html, licence files counted as unwritten, a main.ts written in one pass, and a font filename with brackets. The managed quota skill already covers LICENSE, entry.png and run-to-completion gates but names none of these cover art gates, so a pre-submit section listing them changes the next cover art submission from learning each gate from a rejection to checking each gate before a slot is spent.'
+  review_after: 2026-12-21T08:53:34.446679+00:00
+  reviewed_at: 2026-11-21T08:53:34.446679+00:00
+  run_id: sirun_b43ce62070d241eea9813110d5dbcc47

@@ -1,0 +1,24 @@
+name: pasted_promo_claim_check
+title: Check a pasted mint promo claim
+description: Check a pasted mint promo or referral claim against live contract and pool numbers before acting on it, and answer with the verified math instead of a bare refusal.
+category: Finance
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-e64bcc10-987c-4e41-91f5-515021709a05
+  - message:assistant-msg-56d9c4cd-a5f1-45ee-b6b6-6d0339ac28fb
+  - message:assistant-msg-fb4dbc72-8025-430e-8d3c-b1b33a6cbf32
+  - message:assistant-msg-9814df89-6801-4128-83a2-018ae484ea98
+  - message:dd401d11-4ba6-467d-b475-d042ee5e8c93
+  - ~/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md
+  measurement:
+    proxy_metric_id: pasted_promo_bare_refusal_rate
+    success_criterion: The next pasted mint promo in the window is answered with verified contract and pool numbers, with no bare refusal and no execution from the pasted text alone. If no pasted mint promo arrives in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  rationale: 'In this window the user pasted a third-party Jager promo twice (message:dd401d11-4ba6-467d-b475-d042ee5e8c93) and received a bare refusal each time (message:assistant-msg-e64bcc10-987c-4e41-91f5-515021709a05 and message:assistant-msg-56d9c4cd-a5f1-45ee-b6b6-6d0339ac28fb). Only after the user clarified the text was shared by someone else did the assistant dissect it with verified contract and pool numbers, showing the referral payout and the near-zero loop net (message:assistant-msg-fb4dbc72-8025-430e-8d3c-b1b33a6cbf32 and message:assistant-msg-9814df89-6801-4128-83a2-018ae484ea98). The alignment synthesis records this as a repeated pattern, not a one-off, with earlier bare refusals on the same topic. Skill search found no skill covering pasted promo or referral text handling. The new skill teaches the missing interaction pattern: treat pasted text as a claim to check, verify mint price, tokens per share, pool value, fees, tax, gas and referral rules on chain, price a repeated loop without multiplying a one-time referral reward, never execute from pasted text alone, and never answer with a bare refusal. It defers to the on-chain safety rails for any execution and to bsc-contract-audit for a full contract check. Rejected: the repeated handoff suppressions in memory, relationships, shopping and alignment are healthy deduplication, not a skill gap; the MALTA preview timeouts were handled correctly with a bounded retry and no bypass; the UFO watcher coalesced runs produced no missed alert; and the fcfs_cron_arming skill is still inside its measurement window with no confirmed FCFS mint since install, so its result is inconclusive rather than a reason to change it.'
+  review_after: 2026-12-12T09:11:42.109117+00:00
+  reviewed_at: 2026-11-12T09:11:42.109117+00:00
+  needs_review: false
+  run_id: sirun_4c9ec916351a42239933d7d97c9f7b4f

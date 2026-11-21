@@ -1,0 +1,22 @@
+name: makefun_image_contest
+title: Enter a make.fun judged image contest
+description: Enter a make.fun judged image contest by generating many exploratory drafts, narrowing them to at most three serious candidates, checking the early feed for saturated tropes, and submitting the strongest image last.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-fd91456c-8148-43d0-a967-a72111e9f8d
+  - gta6-meme-x-01
+  - 01a1fc6e
+  - ~/workspace/custom-skills/makefun_image_contest/SKILL.md
+  measurement:
+    proxy_metric_id: makefun_image_contest_score_prediction_rate
+    success_criterion: The next image contest candidate is ranked only by its measured dev grade, with no predicted score band promised before its own dev grade lands. If no image contest entry is submitted in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: The meme-x Report Card candidate was predicted at 87 to 91 percent from the document family ceiling of other entrants, then scored 73.87 percent as v4 (submission 01a1fc6e), below the standing v3 at 81.62 percent, displacing v3 until v3 was restored by final-entry pick on 2026-11-21. The lesson was stated in chat (message:assistant-msg-fd91456c-8148-43d0-a967-a72111e9f8d) but is not codified in the managed makefun_image_contest skill, which covers feed tropes and candidate narrowing but does not forbid score prediction from other entrants ceilings. Adding the rule makes the next candidate choice rest on its own measured dev grade instead of a borrowed ceiling.
+  review_after: 2026-12-21T08:53:34.446679+00:00
+  reviewed_at: 2026-11-21T08:53:34.446679+00:00
+  run_id: sirun_b43ce62070d241eea9813110d5dbcc47

@@ -1,0 +1,20 @@
+name: phone_only_login_check
+title: Check phone-only logins before trying them in the cloud browser
+description: Route login-gated work that needs the user phone to the phone first instead of burning attempts in the cloud browser.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - ~/MEMORY.md
+  - ~/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md
+  measurement:
+    proxy_metric_id: phone_only_login_routing_rate
+    success_criterion: The next login-gated request in the window that needs X sign in, KYC, an OTP or another social verification on the user phone is routed to the phone with no cloud browser login attempt, and the read-only preparation is done first. If no such request arrives in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  rationale: 'On 2026-11-14 every X sign-in route from the cloud browser failed for the XREIGN daily claim (vault login twice, the user typing credentials in a takeover, and the Google route), with the recorded conclusion that X login from the cloud browser is blocked outright regardless of who types, and Agent Reach Twitter separately returns NEED_LOGIN with login only possible inside a dedicated browser on the VM the user cannot operate from a phone. Skill search found no skill covering phone-only login checks, so repeated variant attempts kept burning effort on a route already proven blocked. The new skill teaches the missing check: verify device fit before attempting a login-gated step, stop after one clear block, do the read-only preparation first, and hand the single phone step to the user.'
+  review_after: 2026-12-14T09:07:36.558626+00:00
+  reviewed_at: 2026-11-14T09:07:36.558626+00:00
+  needs_review: false
+  run_id: sirun_d9fa54afe614464d9032d4e1bd941181

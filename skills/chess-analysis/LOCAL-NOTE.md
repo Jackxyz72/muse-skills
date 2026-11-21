@@ -1,0 +1,2 @@
+# Local note (2026-11-21)
+Installed md-only (SKILL.md + references) from brumar/chess-postmortem-skills. Upstream scripts/ (Stockfish sweep, viewer builder, get_stockfish.sh downloader) and JS assets were NOT copied — never run the upstream downloader. Use the post-mortem METHOD (sweep, flag >=0.3 pawn losses, investigate each mistake, annotate the why) with our own engine setup. Prime use here: post-mortems of tiny-chess gauntlet losses to feed v7+ tuning. No reference-engine code may be copied into a make.fun entry (authorship rule).

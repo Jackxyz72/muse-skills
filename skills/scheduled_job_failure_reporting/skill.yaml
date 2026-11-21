@@ -1,0 +1,22 @@
+name: scheduled_job_failure_reporting
+title: Report scheduled job failures and unclaimed outcomes
+description: Report the outcome of every scheduled claim, retry and reminder run, including failures and still unclaimed items, and report watcher runs only on a mint success, a blocker or a dangerous candidate, instead of staying silent on failures.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-f311bcf2-1cb1-9d9b-cf6e-3a0a78fb2a1
+  - goal_0c6eef8eb9ec
+  - ~/workspace/custom-skills/fcfs_cron_arming/SKILL.md
+  - ~/workspace/custom-skills/bsc-free-mint-watch/SKILL.md
+  measurement:
+    proxy_metric_id: scheduled_job_failure_report_rate
+    success_criterion: The next scheduled claim or retry jobs in the window report every failure and still unclaimed outcome in a brief line, with no silent failed run, and no schedule is deleted on a binary missing diagnosis. If no scheduled claim or retry job runs in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: Eight to nine scheduled claim retries failed silently before 2026-11-20, with PXIO stuck at 150 of 150 and GOAT and MALTA bonuses unclaimed, until the user set the rule to always report failures and still unclaimed outcomes and the fix was applied to six cron bodies only, so a new schedule would not inherit it. The ONLYAI retry cron then self-deleted when a worker misread a missing baw binary after a VM replacement as a dead session, while the session was still logged in and the schedule had to be revived. No managed skill covers general scheduled job reporting, since fcfs_cron_arming covers only the FCFS executor run, so a new managed skill captures the report always rule for claim, retry and reminder runs and the check binary before diagnosing session rule for every future schedule, while watcher runs stay quiet unless a mint succeeds, a blocker needs the user, or a dangerous candidate is flagged, matching the bsc-free-mint-watch reporting contract and avoiding hundreds of no-change reports from the 1-minute and 5-minute watchers.
+  review_after: 2026-12-20T09:10:34.940295+00:00
+  reviewed_at: 2026-11-20T09:10:34.940295+00:00
+  run_id: sirun_0fcad0a919604bf991545858d45791af

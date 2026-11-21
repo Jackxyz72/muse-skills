@@ -1,0 +1,2 @@
+# Local note (2026-11-21)
+Installed md-only from jalpp/chessagine.skill. The ChessAgine MCP server is NOT connected in this workspace, so the tool workflows are reference-only until/unless that MCP is set up. Analysis-side skill (positions, openings, game review) — engine BUILDING for tiny-chess stays with the in-house chess-engine skill. No code from any reference engine may be copied into a make.fun entry (authorship rule).
