@@ -213,7 +213,7 @@ async function runPreview(n, reason) {
   const args = ['contract-call', 'preview', '--binanceChainId', '56', '--from', ctx.wallet, '--to', o.to, '--value', valueWei.toString(), '--inputData', data];
   if (o.gasLimit) args.push('--gasLimit', String(o.gasLimit));
   const t0 = L.now(); mark('previewSent', t0);
-  const pr = await L.baw(args, 30000);
+  const pr = await L.baw(args, 90000);
   save(`preview${n}`, pr.stdout || pr.stderr);
   const ck = checkPreview(pr);
   log(`preview #${n} ${pr.ms}ms → ${ck.verdict}${ck.why ? ' ' + ck.why.slice(0, 400) : ''}${ck.requestId ? ' requestId ' + ck.requestId.slice(0, 10) + '… requireConfirmation ' + ck.requireConfirmation + ' gas ' + ck.gas : ''}`);
@@ -358,7 +358,7 @@ async function receipt(hash) {
   if (!code || code === '0x') die(`${o.to} has no code on BSC`);
   const balWei = BigInt(bal);
   log(`balance ${ethers.formatEther(balWei)} BNB | agentId ${agent && agent.handle ? agent.handle + '.ai ' + agent.tokenId : 'NONE'}`);
-  if (balWei < valueWei + ethers.parseEther('0.0003')) die('balance too low for value + gas');
+  if (balWei < valueWei + ethers.parseEther('0.0001')) die('balance too low for value + gas');
   if (agent && agent.tokenId != null) ctx.agentId = agent.tokenId;
   if (ab) { try { decodeIface = new ethers.Interface(ab.abi); log(`sourcify ABI loaded (${ab.match}), ${decodeIface.fragments.filter(f => f.type === 'error').length} errors`); } catch {} }
   const data0 = await buildData(ctx);
