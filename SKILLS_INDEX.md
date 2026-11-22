@@ -1,4 +1,4 @@
-# Skills Index (523 skills)
+# Skills Index (524 skills)
 
 - [aaa-open-world](skills/aaa-open-world/SKILL.md)
 - [academy-guide](skills/academy-guide/SKILL.md)
@@ -98,6 +98,7 @@
 - [chrome-mcp-troubleshooting](skills/chrome-mcp-troubleshooting/SKILL.md)
 - [ci-cd-and-automation](skills/ci-cd-and-automation/SKILL.md)
 - [cicd-security](skills/cicd-security/SKILL.md)
+- [claim_mode_fire](skills/claim_mode_fire/SKILL.md)
 - [claude-api](skills/claude-api/SKILL.md)
 - [client-reverse](skills/client-reverse/SKILL.md)
 - [cloud-iam-deep](skills/cloud-iam-deep/SKILL.md)
