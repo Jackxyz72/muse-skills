@@ -1,0 +1,21 @@
+name: claim_mode_fire
+title: Fire an already open BSC mint or claim
+description: Fire a mint or claim that is already open without choking its own preview.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - AGENTS.md
+  - ~/workspace/custom-skills/fastmint-fcfs/SKILL.md
+  - ~/workspace/custom-skills/fcfs_cron_arming/SKILL.md
+  measurement:
+    proxy_metric_id: claim_mode_fire_preview_pass_rate
+    success_criterion: The next already open claims pass the preview within 90 seconds with no run using the default spin.
+    window_days: 30
+  needs_review: false
+  rationale: 'Already open claims stalled at the preview for days and a controlled test proved the default 100 ms spin self-choked the preview while interval 2000 passed quickly, with five live claims then succeeding on 2026-11-22. AGENTS.md holds only a standing-note mandate and the fastmint-fcfs skill still describes the default 100 ms spin with no claim mode override, so this expanded skill states the full executable method: fire.js standard mode with no start time and no --once, --interval 2000, --timeout 600 to 900, background or cron execution, a fresh run after a preview-error stop, and the FCFS T-0 exception.'
+  review_after: 2026-12-22T08:53:34.295779+00:00
+  reviewed_at: 2026-11-22T08:53:34.295779+00:00
+  run_id: sirun_eac6fef14e3847e69472499fd28efbb0
