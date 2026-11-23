@@ -6,11 +6,22 @@ Xingchi (xingchiapi.com) adalah **relay API gratis dari komunitas linux.do** yan
 
 ---
 
+## Mulai dari sini — daftar + klaim kredit gratis
+
+API key dibuat di web Xingchi, tapi saldonya diklaim lewat bot Telegram. Urutannya:
+
+1. **Buka bot lewat link undangan ini:** https://t.me/xingchi66bot?start=inv_6805282234 — pencet **Start**, lalu tombol pertama / `/invite` buat menerima **kode redeem** (promo kredit gratis, s.d. $1.000).
+2. **Daftar akun** di https://xingchiapi.com/register — cukup email + password, tanpa kartu / nomor HP.
+3. **Redeem kodenya** di dashboard web (menu Redeem) — saldo masuk ke akun kamu.
+4. **Buat API key** di dashboard (menu API Keys → Create API Key) dan simpan — key inilah yang dipasang ke connector / Codex di langkah instal bawah.
+
+---
+
 ## Yang dibutuhkan buat instal
 
 | # | Kebutuhan | Keterangan |
 |---|---|---|
-| 1 | **Akun Xingchi + API key sendiri** | Daftar di dashboard xingchiapi.com (biasanya lewat komunitas / grup Telegram linux.do), lalu buat API key. **Key TIDAK disediakan di repo ini** — tiap orang wajib pakai key-nya sendiri. Grup key menentukan model yang bisa dijangkau. |
+| 1 | **Akun Xingchi + API key sendiri** | Ikuti langkah "Mulai dari sini" di atas: klaim kode redeem lewat bot undangan, daftar di xingchiapi.com, redeem, lalu buat API key di dashboard. **Key TIDAK disediakan di repo ini** — tiap orang wajib pakai key-nya sendiri. Grup key menentukan model yang bisa dijangkau. |
 | 2 | **Python 3** | Buat jalanin helper `bin/xingchi.py` / `bin/xingchi_standalone.py`. Tanpa library tambahan (cuma stdlib). |
 | 3a | **Muse** (jalur connector) | Buat jalur resmi di repo ini: Muse dengan dukungan custom connector + Secure Vault, supaya key tersimpan aman dan tidak pernah tertulis di file/chat. |
 | 3b | **ATAU Codex CLI** (jalur pendamping coding) | Jalur yang terbukti jalan buat second opinion coding. Butuh Node.js / Codex CLI terpasang (`codex` di PATH). |
