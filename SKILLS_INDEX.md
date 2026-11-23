@@ -1,4 +1,4 @@
-# Skills Index (524 skills)
+# Skills Index (525 skills)
 
 - [aaa-open-world](skills/aaa-open-world/SKILL.md)
 - [academy-guide](skills/academy-guide/SKILL.md)
@@ -101,6 +101,7 @@
 - [claim_mode_fire](skills/claim_mode_fire/SKILL.md)
 - [claude-api](skills/claude-api/SKILL.md)
 - [client-reverse](skills/client-reverse/SKILL.md)
+- [cloud-compute](skills/cloud-compute/SKILL.md)
 - [cloud-iam-deep](skills/cloud-iam-deep/SKILL.md)
 - [cloud-pentest](skills/cloud-pentest/SKILL.md)
 - [code-improver](skills/code-improver/SKILL.md)
