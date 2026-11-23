@@ -6,6 +6,10 @@ Setiap skill ada di folder `skills/<nama-skill>/` dengan file utama `SKILL.md`.
 
 👉 Daftar lengkap: [SKILLS_INDEX.md](SKILLS_INDEX.md)
 
+## Connector pendamping
+
+- **[Xingchi](connectors/custom.xingchi/)** — connector + panduan instal buat memasang Xingchi (relay API gratis komunitas linux.do, model `gpt-6.1-sol` / `gpt-6-astra`) sebagai pendamping / otak kedua Muse, termasuk jalur Codex CLI yang terbukti jalan. Syarat utamanya: akun Xingchi + API key sendiri (key tidak disediakan di repo ini).
+
 ## Cara pasang
 
 ### Pasang semua

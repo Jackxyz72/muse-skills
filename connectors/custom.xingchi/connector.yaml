@@ -1,0 +1,5 @@
+id: "custom.xingchi"
+title: "Xingchi"
+description: "Use Xingchi through its registered API."
+include_in_prompt: true
+require_auth: true

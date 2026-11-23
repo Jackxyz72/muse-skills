@@ -1,0 +1,14 @@
+# Example Codex CLI config for the Xingchi companion route.
+# Copy to ~/.codex/config.toml
+# The API key is NOT stored here — Codex reads it from the env var
+# named by env_key at launch time only:
+#   XINGCHI_KEY="your-key" codex exec --skip-git-repo-check "<prompt>" < /dev/null
+
+model = "gpt-6.1-sol"
+model_provider = "xingchi"
+
+[model_providers.xingchi]
+name = "Xingchi"
+base_url = "https://api.xingchiapi.com/v1"
+env_key = "XINGCHI_KEY"
+wire_api = "responses"
