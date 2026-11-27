@@ -1,0 +1,23 @@
+name: makefun_game_contest
+title: Build a make.fun game contest entry
+description: Build a make.fun game contest entry with the standing WebGL2 and ultra-HD rules in the builder brief, defect-first polish rounds capped at three, and a submit-or-stop decision before the round cutoff.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:57774590
+  - message:ff0ce420
+  - message:cbfa13d0
+  - 01a218c4
+  - 01a2190a
+  measurement:
+    proxy_metric_id: makefun_game_brief_rule_injection_rate
+    success_criterion: The next make.fun game contest builder brief carries hand-written WebGL2 with the fallback chain and no external 3D library plus the system density and high-poly rules, polish runs from named defects and stops at three rounds, and the entry is submitted before its round cutoff or a stop decision is recorded with the time left. If no game contest runs in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: The current game skill predates the 2026-11-27 WebGL2 rule 11 lock and still says true 3D on canvas with no engine, so the next builder brief would repeat the NORTHLIGHT RUN rebuild. The update names hand-written WebGL2, the fallback chain, the Three.js ban, the rank one system density pattern, high-poly and 4K render rules, and the repeated axis-swap placement check from the turkey game.
+  review_after: 2026-12-27T09:07:34.696905+00:00
+  reviewed_at: 2026-11-27T09:07:34.696905+00:00
+  run_id: sirun_bf3d521b03f3428dba184084c43b391b
