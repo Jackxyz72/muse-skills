@@ -1,0 +1,30 @@
+name: makefun_finisher_recovery
+title: Recover a flagged make.fun builder or finisher
+description: Recover a make.fun builder or finisher session stopped by a security flag by rebuilding it with file tools in the session the contest mode allows.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - '0608e252'
+  - b589ccf7
+  - f419ae5b
+  - dd30396c
+  - 50090b13
+  - 26e1ab3b
+  - 01a2090e
+  - 01a207fe
+  - message:assistant-msg-1060c7d0
+  - f0c54128
+  - /home/hatch/workspace/custom-skills/makefun_recording_seal/SKILL.md
+  - /home/hatch/workspace/custom-skills/makefun-playbook/SKILL.md
+  measurement:
+    proxy_metric_id: makefun_flagged_finisher_recovery_rate
+    success_criterion: Every builder or finisher session stopped by a security flag in the window is recovered with the file-tools method and reaches a submitted entry with no second same-shape delegated retry after the first flag. If no flagged session occurs in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: 'In the 2026-11-23 to 2026-11-24 window a builder or finisher session stopped on a security flag at repo setup, kit init, or the first main.ts write on the post-X game (submitted 01a207fe), the news-image v3 entry (submitted 01a2090e after three flags), three one-liner sprints, and the Paper Sprint (message:assistant-msg-1060c7d0, rerun approved f0c54128). Repeating the same delegated shape flagged again, while authoring with file tools plus testing from /tmp plus single-purpose git calls succeeded on the news-image v3 entry and the one-liner sprints (0608e252, b589ccf7, f419ae5b, dd30396c, 50090b13, 26e1ab3b). No managed skill names this stop or its recovery, and the Paper Sprint stopped again after the lesson was already written in memory, so the next flagged session is likely to burn the same retries before switching methods. Repair for the verifier conflict: main-session authoring is now limited to bundle-mode entries, and recorded or strict-transcript contests recover in a fresh recorded builder session started after the recorder starts, with the lead making zero tool calls between record start and the sealed result and staying out of the sealing set, matching makefun_recording_seal and the makefun-playbook strict-transcripts rule that the main session is excluded by design.'
+  review_after: 2026-12-24T08:53:35.242148+00:00
+  reviewed_at: 2026-11-24T08:53:35.242148+00:00
+  run_id: sirun_6106eb554cc74bebae63efcfd0552ecc
