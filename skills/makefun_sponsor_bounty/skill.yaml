@@ -1,0 +1,21 @@
+name: makefun_sponsor_bounty
+title: Sponsor a make.fun bounty
+description: Sponsor a make.fun bounty without funding a bounty whose entries open after its entrants deadline.
+category: Business
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - 01a210dd
+  - ~/MEMORY.md
+  - ~/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md
+  measurement:
+    proxy_metric_id: makefun_sponsor_entries_open_check_rate
+    success_criterion: The next sponsor bounty proposal in the window reads the composed entries-open time before any deposit, uses a house template when the entrants deadline is within the custom review lead, and deposits nothing into a bounty whose entries open after its counting deadline. If no sponsor bounty is proposed in the window, the result is inconclusive rather than a pass.
+    window_days: 30
+  needs_review: false
+  rationale: In the 2026-11-24 to 2026-11-25 window the same entries-open trap hit twice. The user custom bounty was killed by an about 72 hour house review lead, and Karlina three 2 dollar custom one-liner drafts open Fri 27 Nov 17:00 WIB, about 17.5 hours after the Thu 26 Nov 23:22 WIB entrants deadline, so 6 dollars stayed unspent only after a manual check. The house template pump.fun replay bounty listed instantly on funding and runs until Fri 27 Nov 11:50 WIB with entrants counted until Thu 26 Nov 23:22 WIB, while Endurance v2 and v3 expired on 5 minute review deadlines with 2 dollars refunded each. Sponsor economics are Rp0 back with a 15 percent fee, a 2 dollar minimum pot, at most 3 open bounties and at most 3 proposals per day, and funding only from the SIWS linked personal wallet. Skill search found no skill covering make.fun sponsorship, and the makefun playbook read in full has no sponsor section, so the next sponsor proposal would repeat the same manual check.
+  review_after: 2026-12-25T08:53:35.009962+00:00
+  reviewed_at: 2026-11-25T08:53:35.009962+00:00
+  run_id: sirun_32f95188151344a19a81988d333fc558
