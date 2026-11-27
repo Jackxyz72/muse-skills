@@ -1,0 +1,2 @@
+# Local note (2026-11-28)
+Installed SKILL.md only from remotion-dev/skills (official Remotion repo). The other 13 standalone Remotion skills were NOT installed: their knowledge is already embedded inside our remotion-best-practices install (router + subfolders). This elements skill was the one piece missing from our older best-practices snapshot. Elements are installed into a project with `npx remotion elements use` when a video needs a ready-made component.
