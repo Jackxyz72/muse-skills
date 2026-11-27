@@ -1,6 +1,6 @@
 # Muse Skills Collection — by @Jackxyz72
 
-Koleksi **525 skill** untuk AI agent (Muse / agent yang kompatibel dengan format `SKILL.md`), dikumpulkan dan dipakai sehari-hari oleh @Jackxyz72 — untuk make.fun bounties, bug bounty, BSC / Binance Agentic Wallet mint & claim, game dev, chess, riset, dan banyak lagi.
+Koleksi **529 skill** untuk AI agent (Muse / agent yang kompatibel dengan format `SKILL.md`), dikumpulkan dan dipakai sehari-hari oleh @Jackxyz72 — untuk make.fun bounties, bug bounty, BSC / Binance Agentic Wallet mint & claim, game dev, chess, riset, dan banyak lagi.
 
 Setiap skill ada di folder `skills/<nama-skill>/` dengan file utama `SKILL.md`.
 
